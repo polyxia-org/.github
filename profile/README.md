@@ -33,7 +33,7 @@ In addition, Polyxia features an NLU algorithm for detecting user intent from te
 
 ## Contributing
 
-Contributions to Polyxia are welcome! Please see the [CONTRIBUTING.md](../.github/CONTRIBUTING.md) file for more information.
+Contributions to Polyxia are welcome! Please see the [CONTRIBUTING.md](https://github.com/polyxia-org/.github/blob/main/.github/CONTRIBUTING.md) file for more information.
 
 ## License
 
