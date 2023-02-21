@@ -29,6 +29,12 @@ In addition, Polyxia features an NLU algorithm for detecting user intent from te
 [Gateway](https://github.com/polyxia-org/gateway)|[![Super Linter](https://img.shields.io/github/actions/workflow/status/polyxia-org/gateway/ci.yml?branch=main)](https://github.com/polyxia-org/gateway/tree/main)|Gateway is the entry point of the PolyXia platform. It is responsible for the communication with the user and the orchestration of the different components.|
 |[Firepilot](https://github.com/polyxia-org/firepilot)|[![Super Linter](https://img.shields.io/github/actions/workflow/status/polyxia-org/firepilot/ci.yml?branch=main)](https://github.com/polyxia-org/firepilot/tree/main)|Rust API to pilot Firecracker.|
 
+
+
+## Contributing
+
+Contributions to Polyxia are welcome! Please see the [CONTRIBUTING.md](../.github/CONTRIBUTING.md) file for more information.
+
 ## License
 
 The Polyxia project belongs to Polytech Montpellier and is released under the MIT license. Please see the [LICENSE](../LICENSE) file for more information.
