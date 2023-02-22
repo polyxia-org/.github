@@ -37,4 +37,4 @@ Contributions to Polyxia are welcome! Please see the [CONTRIBUTING.md](https://g
 
 ## License
 
-The Polyxia project belongs to Polytech Montpellier and is released under the MIT license. Please see the [LICENSE](../LICENSE) file for more information.
+The Polyxia project belongs to Polytech Montpellier and is released under the MIT license. Please see the [LICENSE](https://github.com/polyxia-org/.github/blob/main/LICENSE) file for more information.
