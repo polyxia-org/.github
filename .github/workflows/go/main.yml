@@ -1,0 +1,43 @@
+on:
+  workflow_call:
+    inputs:
+      main-file:
+        required: false
+        type: string
+        default: main.go
+      skip-build:
+        required: false
+        type: boolean
+        default: false
+      skip-release:
+        required: false
+        type: boolean
+        default: false
+      skip-package:
+        required: false
+        type: boolean
+        default: false
+jobs:
+  build:
+    if: ${{ !inputs.skip-build }}
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v3
+        with:
+          go-version: 1.19
+          cache: true
+        run: go build ${{ inputs.main-file }}
+
+  release:
+    if: ${{ !inputs.skip-release && github.ref == 'refs/heads/main' }}
+    uses: polyflix/.github/.github/workflows/release-drafter.yml@main
+
+  package:
+    if: ${{ !inputs.skip-package && github.ref == 'refs/heads/main' || contains(github.ref, 'refs/tags/') }}
+    uses: polyflix/.github/.github/workflows/package-image.yml@main
+    needs: build
+    with:
+      artifact-id: build
+      artifact-download: true
+      artifact-download-dir: dist

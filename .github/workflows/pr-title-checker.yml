@@ -1,0 +1,12 @@
+on:
+  workflow_call:
+
+jobs:
+  title-checker:
+    name: Check PR title
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: aslafy-z/conventional-pr-title-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,49 @@
+on:
+  workflow_call:
+    inputs:
+      manifest-path:
+        required: false
+        type: string
+        default: Cargo.toml
+      skip-build:
+        required: false
+        type: boolean
+        default: false
+      skip-release:
+        required: false
+        type: boolean
+        default: false
+      skip-package:
+        required: false
+        type: boolean
+        default: false
+jobs:
+  build:
+    if: ${{ !inputs.skip-build }}
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --release --all-features --manifest-path ${{ inputs.manifest-path }}
+      - uses: actions-rs/cargo@v1
+        with:
+          command: test
+          args: --release --all-features --manifest-path ${{ inputs.manifest-path }}
+
+  release:
+    if: ${{ !inputs.skip-release && github.ref == 'refs/heads/main' }}
+    uses: polyflix/.github/.github/workflows/release-drafter.yml@main
+
+  package:
+    if: ${{ !inputs.skip-package && github.ref == 'refs/heads/main' || contains(github.ref, 'refs/tags/') }}
+    uses: polyflix/.github/.github/workflows/package-image.yml@main
+    needs: build
+    with:
+      artifact-id: build
+      artifact-download: true
+      artifact-download-dir: dist
