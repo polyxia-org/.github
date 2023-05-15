@@ -20,14 +20,15 @@ In addition, Polyxia features an NLU algorithm for detecting user intent from te
 
 |📒 Projects | 🔭 Status| ✏️ Description|
 |---|---|---|
-|[Polyxia](https://github.com/polyxia-org/polyxia)|[![Super Linter](https://img.shields.io/github/actions/workflow/status/polyxia-org/polyxia/ci.yml?branch=main)](https://github.com/polyxia-org/polyxia/tree/main)|Main repository for the Polyxia project, entry point for the documentation and the project management|
-|[Rik](https://github.com/polyxia-org/rik)|[![Super Linter](https://img.shields.io/github/actions/workflow/status/polyxia-org/rik/rust.yml?branch=main)](https://github.com/polyxia-org/rik/tree/main)|Fork of the Rik project|
-|[Infrastructure](https://github.com/polyxia-org/infrastructure)|[![Super Linter](https://img.shields.io/github/actions/workflow/status/polyxia-org/infrastructure/ci.yml?branch=main)](https://github.com/polyxia-org/infrastructure/tree/main)|This repository contains files for deployment of PolyXia|
-|[Morty](https://github.com/polyxia-org/morty)|[![Super Linter](https://img.shields.io/github/actions/workflow/status/polyxia-org/morty/ci.yml?branch=main)](https://github.com/polyxia-org/morty/tree/main)| Morty is the official CLI to manage / invoke functions over Polyxia.
+|[Assistant](https://github.com/polyxia-org/assistant)|❌|Main repository for the Polyxia project, entry point for the documentation and the project management|
+|[NLU](https://github.com/polyxia-org/nlu)|[![Super Linter](https://img.shields.io/github/actions/workflow/status/polyxia-org/nlu/ci.yml?branch=main)](https://github.com/polyxia-org/nlu/tree/main)|Main repository for the Polyxia project, entry point for the documentation and the project management|
+|[Rik](https://github.com/rik-org/rik)|[![Super Linter](https://img.shields.io/github/actions/workflow/status/rik-org/rik/rust.yml?branch=main)](https://github.com/rik-org/rik/tree/main)|Fork of the Rik project|
+|[Infrastructure](https://github.com/polyxia-org/infrastructure)|❌|This repository contains files for deployment of PolyXia|
+|[Morty](https://github.com/morty-faas/morty)|[![Super Linter](https://img.shields.io/github/actions/workflow/status/morty-faas/morty/morty.yml?branch=main)](https://github.com/morty-faas/morty/tree/main)| Morty is the official CLI to manage / invoke functions over Polyxia.
 |[Alpha](https://github.com/polyxia-org/alpha)|[![Super Linter](https://img.shields.io/github/actions/workflow/status/polyxia-org/alpha/ci.yml?branch=main)](https://github.com/polyxia-org/alpha/tree/main)|Alpha is a lightweight agent responsible for running process and monitor them inside the microVMs.|
-|[Runtimes](https://github.com/polyxia-org/runtimes)|[![Super Linter](https://img.shields.io/github/actions/workflow/status/polyxia-org/runtimes/ci.yml?branch=main)](https://github.com/polyxia-org/runtimes/tree/main)|Runtimes to run functions inside the microVMs.|
+|[Runtimes](https://github.com/morty-faas/runtimes)|❌|Runtimes to run functions inside the microVMs.|
 [Gateway](https://github.com/polyxia-org/gateway)|[![Super Linter](https://img.shields.io/github/actions/workflow/status/polyxia-org/gateway/ci.yml?branch=main)](https://github.com/polyxia-org/gateway/tree/main)|Gateway is the entry point of the PolyXia platform. It is responsible for the communication with the user and the orchestration of the different components.|
-|[Firepilot](https://github.com/polyxia-org/firepilot)|[![Super Linter](https://img.shields.io/github/actions/workflow/status/polyxia-org/firepilot/ci.yml?branch=main)](https://github.com/polyxia-org/firepilot/tree/main)|Rust API to pilot Firecracker.|
+|[Firepilot](https://github.com/rik-org/firepilot)|[![Super Linter](https://img.shields.io/github/actions/workflow/status/rik-org/firepilot/main.yml?branch=main)](https://github.com/rik-org/firepilot/tree/main)|Rust API to pilot Firecracker.|
 
 
 
